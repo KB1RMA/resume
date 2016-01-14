@@ -6,6 +6,9 @@
 
 		<title>Christopher Snyder | Full-Stack Web Developer</title>
 
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
 		<style type="text/css">
 			article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display:block; }
 			audio, canvas, video {
@@ -177,6 +180,7 @@
 				text-transform:uppercase;
 				font-style:italic;
 				font-weight:normal;
+				font-family: 'Open Sans Condensed', sans-serif;
 			}
 			body.pdf h3 {
 				float:left;
@@ -189,7 +193,7 @@
 			}
 			body.pdf blockquote {
 				top:40px;
-				right:50px;
+				right:20px;
 				position:absolute;
 			}
 			body.pdf ul li {
@@ -242,248 +246,248 @@
 				content:".";
 			}
 			body {
-				font-family:'Hoefler Text', Times New Roman, Times, serif;
+				font-family: 'Open Sans Condensed', sans-serif;
 				color:#444444;
 			}
-				h1, h2, h3, h4, ul dl dt { font-family:Futura, "Century Gothic", AppleGothic, sans-serif; }
-				.container {
-					margin:0 auto;
-					padding:0;
-					background:whiteSmoke;
-					border:solid #666666;
-					border-width:8px 0 2px 0;
-					text-align:left;
+			h1, h2, h3, h4, ul dl dt {
+				font-family: 'Roboto Slab', serif;
+			}
+			.container {
+				margin:0 auto;
+				padding:0;
+				background:whiteSmoke;
+				border:solid #666666;
+				border-width:8px 0 2px 0;
+				text-align:left;
+			}
+			.resume {
+				position:relative;
+				padding:0 20px 10px 20px;
+			}
+			.resume > blockquote { text-align:right; }
+			.resume > blockquote a[href$='arrl.net'] {
+				display:block;
+				margin-top: -10px;
+			}
+			a { color:#990003; }
+			a[href$='.pdf'] {
+				display:inline-block;
+				background:#666666;
+				color:white;
+				padding:6px 12px;
+				margin-bottom:6px;
+				text-decoration:none;
+			}
+			blockquote {
+				margin:0;
+				padding:0;
+				line-height:1.4em;
+			}
+			hr {
+				display:block;
+				position:relative;
+				padding:0;
+				margin:10px auto;
+				width:100%;
+				clear:both;
+				border:none;
+				border-top:1px solid #cccccc;
+				font-size:1px;
+				line-height:0;
+				overflow:visible;
+				page-break-after:avoid;
+			}
+			h1 {
+				margin:0;
+				padding:0;
+				font-size:36px;
+				letter-spacing:-1px;
+				font-weight:normal;
+			}
+			h2 {
+				margin:0;
+				padding:0;
+				font-size:18px;
+				font-style:italic;
+				letter-spacing:-1px;
+				font-weight:normal;
+			}
+			h3 {
+				margin:0;
+				padding:5px 0 .5em;
+				font-size:140%;
+				font-style:italic;
+				font-weight:normal;
+			}
+			h3+p {
+				margin:.6em 0 16px;
+				padding:0;
+				display:block;
+			}
+			ul {
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			ul li {
+				margin:0;
+				padding:0;
+			}
+			ul dl {
+				margin:.3em 0 0;
+				padding:0;
+				width:100%;
+			}
+			ul dl dt { font-size:100%; }
+			ul dl dd {
+				margin:0 0 1em;
+				padding:0 2em 0 0;
+				font-size:.8em;
+				line-height:1.5em;
+			}
+			ol {
+				margin:0;
+				padding:0 0 .75em;
+				width:84%;
+				display:inline-block;
+			}
+			ol li {
+				margin:0 0 0 1em;
+				padding:0;
+				border-top:1px solid #cccccc;
+				width:100%;
+				float:left;
+				list-style:none;
+				line-height:24px;
+				font-size:14px;
+			}
+			ol li:nth-child(1) { border-top:none; }
+			dl {
+				display:inline-block;
+				width:75%;
+				margin:0;
+				padding:0;
+			}
+			dl dt {
+				margin:0;
+				padding:0;
+				font-size:140%;
+			}
+			dl dd {
+				margin:0 0 1.5em;
+				padding:0;
+				font-size:80%;
+				line-height:1.4em;
+			}
+			dl strong { display:block; }
+			dl em {
+				display:block;
+				font-size:110%;
+				margin:.15em 0 .5em;
+				font-style:bold;
+			}
+			#footer { display:none; }
+			#footer + p {
+				width:100%;
+				font-size:11px;
+				text-align:center;
+			}
+
+			@media screen and (min-width: 15em) {
+			}
+			@media screen and (min-width: 30em) {
+			}
+			@media screen and (min-width: 37.5em) {
+				body { padding:2em 0; }
+				blockquote {
+					top:10px;
+					right:50px;
+					position:absolute;
 				}
+				h1 { margin-top:.5em; }
+				ol { margin:0 0 0 1em; }
+				ol li {
+					width:50%;
+					margin:0;
+				}
+				ol li:nth-child(1), ol li:nth-child(2) { border-top:none; }
+			}
+			@media screen and (min-width: 57em) {
+				.container { width:912px; }
 				.resume {
 					position:relative;
-					padding:0 20px 10px 20px;
-				}
-				.resume > blockquote { text-align:right; }
-				.resume > blockquote a[href$='arrl.net'] {
-					display:block;
-					margin-top: -10px;
-				}
-				a { color:#990003; }
-				a[href$='.pdf'] {
-					display:inline-block;
-					background:#666666;
-					color:white;
-					padding:6px 12px;
-					margin-bottom:6px;
-					text-decoration:none;
+					padding:40px 50px;
 				}
 				blockquote {
-					margin:0;
-					padding:0;
-					line-height:1.4em;
-				}
-				hr {
-					display:block;
-					position:relative;
-					padding:0;
-					margin:10px auto;
-					width:100%;
-					clear:both;
-					border:none;
-					border-top:1px solid #cccccc;
-					font-size:1px;
-					line-height:0;
-					overflow:visible;
-					page-break-after:avoid;
+					top:40px;
+					right:50px;
+					position:absolute;
 				}
 				h1 {
-					margin:0;
-					padding:0;
-					font-size:36px;
-					letter-spacing:-1px;
+					margin-top:0;
+					font-size:48px;
+					text-transform:uppercase;
+					letter-spacing:3px;
 					font-weight:normal;
 				}
 				h2 {
-					margin:0;
-					padding:0;
-					font-size:18px;
+					text-transform:uppercase;
 					font-style:italic;
-					letter-spacing:-1px;
+					letter-spacing:2px;
 					font-weight:normal;
 				}
 				h3 {
-					margin:0;
-					padding:0 0 .5em;
-					font-size:150%;
-					font-style:italic;
-					font-weight:normal;
+					float:left;
+					width:16%;
 				}
 				h3+p {
-					margin:.6em 0 16px;
-					padding:0;
-					display:block;
-					font-size:104%;
-					line-height:24px;
-				}
-				ul {
-					margin:0;
-					padding:0;
-					list-style:none;
+					float:left;
+					width:84%;
 				}
 				ul li {
-					margin:0;
-					padding:0;
+					width:28%;
+					float:left;
 				}
-				ul dl {
-					margin:.3em 0 0;
-					padding:0;
-					width:100%;
+				ul dl dt {
+					font-size:122%;
+					font-weight:normal;
+					margin-bottom:.75em;
 				}
-				ul dl dt { font-size:100%; }
-				ul dl dd {
-					margin:0 0 1em;
-					padding:0 2em 0 0;
-					font-size:.8em;
-					line-height:1.5em;
-				}
+				ul dl dd { padding:0 4em 0 0; }
 				ol {
-					margin:0;
-					padding:0 0 .75em;
+					float:left;
 					width:84%;
-					display:inline-block;
+					margin:.6em 0 0;
 				}
 				ol li {
-					margin:0 0 0 1em;
-					padding:0;
-					border-top:1px solid #cccccc;
-					width:100%;
-					float:left;
-					list-style:none;
-					line-height:24px;
-					font-size:14px;
-				}
-				ol li:nth-child(1) { border-top:none; }
-				dl {
-					display:inline-block;
-					width:75%;
+					width:33%;
 					margin:0;
-					padding:0;
 				}
-				dl dt {
-					margin:0;
-					padding:0;
-					font-size:140%;
+				ol li:nth-child(3n) { width:34%; }
+				ol li:nth-child(1), ol li:nth-child(2), ol li:nth-child(3) { border-top:none; }
+				dl { margin:.5em 0 0; }
+				dl strong {
+					float:right;
+					margin-top:-2em;
 				}
-				dl dd {
-					margin:0 0 1.5em;
-					padding:0;
-					font-size:80%;
-					line-height:1.4em;
-				}
-				dl strong { display:block; }
 				dl em {
-					display:block;
-					font-size:110%;
-					margin:.15em 0 .5em;
-					font-style:bold;
+					font-size:130%;
+					font-style:normal;
 				}
-				#footer { display:none; }
-				#footer + p {
-					width:100%;
-					font-size:11px;
-					text-align:center;
+				dl ul {
+					list-style-type:disc;
+					margin-left:5px;
+					margin-right:0px;
+					padding-left:10px;
+					padding-right:0px;
 				}
-
-				@media screen and (min-width: 15em) {
+				dl ul li {
+					width:auto;
+					float:none;
 				}
-				@media screen and (min-width: 30em) {
-				}
-				@media screen and (min-width: 37.5em) {
-					body { padding:2em 0; }
-					blockquote {
-						top:10px;
-						right:50px;
-						position:absolute;
-					}
-					h1 { margin-top:.5em; }
-					ol { margin:0 0 0 1em; }
-					ol li {
-						width:50%;
-						margin:0;
-					}
-					ol li:nth-child(1), ol li:nth-child(2) { border-top:none; }
-				}
-				@media screen and (min-width: 57em) {
-					.container { width:912px; }
-					.resume {
-						position:relative;
-						padding:40px 50px;
-					}
-					blockquote {
-						top:40px;
-						right:50px;
-						position:absolute;
-					}
-					h1 {
-						margin-top:0;
-						font-size:48px;
-						text-transform:uppercase;
-						letter-spacing:3px;
-						font-weight:normal;
-					}
-					h2 {
-						text-transform:uppercase;
-						font-style:italic;
-						letter-spacing:2px;
-						font-weight:normal;
-					}
-					h3 {
-						float:left;
-						width:16%;
-					}
-					h3+p {
-						float:left;
-						width:84%;
-					}
-					ul li {
-						width:28%;
-						float:left;
-					}
-					ul dl dt {
-						font-size:122%;
-						font-weight:normal;
-						margin-bottom:.75em;
-					}
-					ul dl dd { padding:0 4em 0 0; }
-					ol {
-						float:left;
-						width:84%;
-						margin:.6em 0 0;
-					}
-					ol li {
-						width:33%;
-						margin:0;
-					}
-					ol li:nth-child(3n) { width:34%; }
-					ol li:nth-child(1), ol li:nth-child(2), ol li:nth-child(3) { border-top:none; }
-					dl { margin:.5em 0 0; }
-					dl strong {
-						float:right;
-						margin-top:-2em;
-					}
-					dl em {
-						font-size:130%;
-						font-style:normal;
-					}
-					dl ul {
-						list-style-type:disc;
-						margin-left:5px;
-						margin-right:0px;
-						padding-left:10px;
-						padding-right:0px;
-					}
-					dl ul li {
-						width:auto;
-						float:none;
-					}
-				}
-				@media screen and (min-width: 118em) {
-				}
+			}
+			@media screen and (min-width: 118em) {
+			}
 		</style>
 
 	</head>
@@ -498,7 +502,7 @@
 
 				<blockquote>
 					<p><a href="resume.pdf">Download PDF</a>
-					<a href="mailto:kb1rma@arrl.net">kb1rma@arrl.net</a>
+					<a href="mailto:kb1rma@arrl.net">KB1RMA@arrl.net</a>
 					(603) 770-6389</p>
 				</blockquote>
 
@@ -521,10 +525,10 @@
 								Improving Wordpress page response times with effective caching.</p>
 
 						<pre><code>
-  // Front-End Resources
-  var resources = ['Javascript', 'HTML', 'CSS', 'SCSS', 'LESS', 'jQuery', 'PHP', 'Twig', 'Blade', 'Git', 'Grunt.JS', 'Yeoman',
-                   'Sketch', 'Photoshop', 'Illustrator'];
-						</code></pre>
+  <span style='color:#696969; '>// Front-End Resources</span>
+  <span style='color:#800000; font-weight:bold; '>var</span> resources <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#800000; '>'</span><span style='color:#0000e6; '>Javascript</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>HTML</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>CSS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>SCSS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>LESS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>jQuery</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>PHP</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Twig</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Blade</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Git</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Grunt.JS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Yeoman</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span>
+                   <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Sketch</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Photoshop</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Illustrator</span><span style='color:#800000; '>'</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+</code></pre>
 					</dd>
 
 					<dt>Back-End Development / System Administration</dt>
@@ -533,14 +537,14 @@
 								Multi node management via Puppet.</p>
 
 						<pre><code>
-  // Back-End Resources
-  $resources = ['PHP', 'Ruby', 'Composer', 'Wordpress', 'OctoberCMS', 'Laravel', 'CakePHP', 'LithiumPHP', 'Rails', 'MySQL',
-                'PostgreSQL', 'MongoDB', 'Git'];
+  <span style='color:#696969;'>// Back-End Resources</span><span style='color:#000000;  '></span>
+  <span style='color:#797997;  '>$resources</span><span style='color:#000000;  '> </span><span style='color:#808030;  '>=</span><span style='color:#000000;  '> </span><span style='color:#808030;  '>[</span><span style='color:#0000e6;  '>'PHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Ruby'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Composer'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Wordpress'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'OctoberCMS'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Laravel'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'CakePHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'LithiumPHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Rails'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'MySQL'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '></span>
+                <span style='color:#0000e6;  '>'PostgreSQL'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'MongoDB'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Git'</span><span style='color:#808030;  '>]</span><span style='color:#800080;  '>;</span><span style='color:#000000;  '></span>
 						</code></pre>
-						<pre><code>
-  # Administration Tools &amp; Software
-  tools = ['Bash', 'Ruby', 'Puppet', 'Debian', 'Apache', 'Nginx', 'Varnish', 'MySQL', 'PostgreSQL', 'MongoDB', 'AWS']
-						</code></pre>
+
+						<pre><code>  <span style='color:#696969; '># Administration Tools &amp; Software</span>
+  tools <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#0000e6; '>'Bash'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Ruby'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Puppet'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Debian'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Apache'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Nginx'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Varnish'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'MySQL'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'PostgreSQL'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'MongoDB'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'AWS'</span><span style='color:#808030; '>]</span>
+</code></pre>
 					</dd>
 
 				</dl>
@@ -557,7 +561,7 @@
 						<strong>January 2014 - December 2015</strong></p>
 
 						<p>
-							Develop and realize site designs based on mock-ups provided as Photoshop, Illustrator and Sketch files with involvement from initial brainstorm to final site launch.
+							Develop site designs based on mock-ups provided as Photoshop, Illustrator and Sketch files with involvement from initial brainstorm to final site launch.
 							Sites varying in complexity from static single page parallax microsites to fully featured custom Wordpress themes.
 							Provide one-on-one Wordpress CMS training post launch to clients.
 							Contribute to proposals and RFP responses and accompany account teams to new business pitches.
@@ -570,9 +574,9 @@
 						<p><em>Lead Developer/Managing Director</em>
 						<strong>August 2011 - January 2014</strong></p>
 
-						<p>Building custom designed experiences to express small business&#8217; presences on the web. Sites requiring a CMS are built on Wordpress with themes adhering to the latest Wordpress best practices at the time of development.
-						E-commerce solutions leverage the infinitely flexible Lemonstand platform allowing for rapid development and a wide range of flexibility for customization.
-						Provided hosting solutions with globally distributed caching nodes for increased reliability and response time.</p>
+						<p>Building custom designed online experiences expressing small business&#8217; presences on the web. Sites requiring a CMS are built on Wordpress with themes adhering to the latest Wordpress best practices.
+						E-commerce solutions built on the Lemonstand platform allowing for rapid development and vast flexibility for customization.
+						Provided and developed hosting solutions with globally distributed caching nodes for increased reliability, low response time and high traffic handling.</p>
 					</dd>
 
 					<dt>Florentine Films</dt>
@@ -615,7 +619,7 @@
 
 				<h3 id="footer">Footer</h3>
 
-				<p>Christopher Snyder &#8212; <a href="mailto:kb1rma@arrl.net">kb1rma@arrl.net</a> &#8212; (603) 770-6389 &#8212; References available upon request</p>
+				<p>Christopher Snyder &#8212; <a href="mailto:kb1rma@arrl.net">KB1RMA@arrl.net</a> &#8212; (603) 770-6389 &#8212; Newburyport, MA &#8212; References available upon request</p>
 
 				<hr />
 
