@@ -1,631 +1,594 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+<meta charset="utf-8">
 
-		<meta charset="utf-8">
+<title>Christopher Snyder | Full-Stack Web Developer</title>
+<style type="text/css">
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display:block; }
+audio, canvas, video {
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+}
+audio:not([controls]) { display:none; }
+[hidden] { display:none; }
+html {
+  font-size:100%;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+html, button, input, select, textarea { font-family:sans-serif; }
+body { margin:0; }
+a:focus { outline:thin dotted; }
+a:hover, a:active { outline:0; }
+h1 {
+  font-size:2em;
+  margin:0.67em 0;
+}
+h2 {
+  font-size:1.5em;
+  margin:0.83em 0;
+}
+h3 {
+  font-size:1.17em;
+  margin:1em 0;
+}
+h4 {
+  font-size:1em;
+  margin:1.33em 0;
+}
+h5 {
+  font-size:0.83em;
+  margin:1.67em 0;
+}
+h6 {
+  font-size:0.75em;
+  margin:2.33em 0;
+}
+abbr[title] { border-bottom:1px dotted; }
+b, strong { font-weight:bold; }
+blockquote { margin:1em 40px; }
+dfn { font-style:italic; }
+mark {
+  background:#ffff00;
+  color:#000000;
+}
+p, pre { margin:1em 0; }
+pre, code, kbd, samp {
+  font-family:'consolas', monospace, serif;
+  _font-family:'courier new', monospace;
+  font-size:.93em;
+}
+pre {
+  white-space:pre;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+}
+q { quotes:none; }
+q:before, q:after {
+  content:'';
+  content:none;
+}
+small { font-size:75%; }
+sub, sup {
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline;
+}
+sup { top:-0.5em; }
+sub { bottom:-0.25em; }
+dl, menu, ol, ul { margin:1em 0; }
+dd { margin:0 0 0 40px; }
+menu, ol, ul { padding:0 0 0 40px; }
+nav ul, nav ol {
+  list-style:none;
+  list-style-image:none;
+}
+img {
+  border:0;
+  -ms-interpolation-mode:bicubic;
+}
+svg:not(:root) { overflow:hidden; }
+figure { margin:0; }
+form { margin:0; }
+fieldset {
+  border:1px solid #c0c0c0;
+  margin:0 2px;
+  padding:0.35em 0.625em 0.75em;
+}
+legend {
+  border:0;
+  padding:0;
+  white-space:normal;
+  *margin-left:-7px;
+}
+button, input, select, textarea {
+  font-size:100%;
+  margin:0;
+  vertical-align:baseline;
+  *vertical-align:middle;
+}
+button, input { line-height:normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor:pointer;
+  -webkit-appearance:button;
+  *overflow:visible;
+}
+button[disabled], input[disabled] { cursor:default; }
+input[type="checkbox"], input[type="radio"] {
+  box-sizing:border-box;
+  padding:0;
+  *height:13px;
+  *width:13px;
+}
+input[type="search"] {
+  -webkit-appearance:textfield;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance:none; }
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border:0;
+  padding:0;
+}
+textarea {
+  overflow:auto;
+  vertical-align:top;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
 
-		<title>Christopher Snyder | Full-Stack Web Developer</title>
+body.pdf { color:black; }
+body.pdf a {
+  text-decoration:none;
+  color:black;
+}
+body.pdf .container {
+  width:1000px;
+  margin:0 auto;
+  padding:0;
+  background:none;
+  border:none;
+  border-width:8px 0 2px 0;
+  text-align:left;
+}
+body.pdf .resume {
+  position:relative;
+  padding:10px 20px 0px 20px;
+}
+body.pdf a[href$='.pdf'] { display:none; }
+body.pdf h1 {
+  letter-spacing:0;
+  margin-top:0;
+  font-size:48px;
+  text-transform:uppercase;
+  font-weight:normal;
+}
+body.pdf h2 {
+  letter-spacing:0;
+  text-transform:uppercase;
+  font-style:italic;
+  font-weight:normal;
+}
+body.pdf h3 {
+  float:left;
+  width:14%;
+  font-style:normal;
+}
+body.pdf h3+p {
+  float:left;
+  width:84%;
+}
+body.pdf blockquote {
+  top:40px;
+  right:50px;
+  position:absolute;
+}
+body.pdf ul li {
+  width:28%;
+  float:left;
+}
+body.pdf ul dl {
+  margin:0;
+  padding:0.3em 0 0;
+}
+body.pdf ul dl dt {
+  font-size:122%;
+  font-weight:normal;
+  margin:0 0 .75em;
+}
+body.pdf ul dl dd { padding:0 4em 0 0; }
+body.pdf ol {
+  float:left;
+  width:84%;
+  margin:.7em 0 0;
+}
+body.pdf ol li {
+  width:33%;
+  margin:0;
+}
+body.pdf ol li:nth-child(3n) { width:34%; }
+body.pdf ol li:nth-child(1), body.pdf ol li:nth-child(2), body.pdf ol li:nth-child(3) { border-top:none; }
+body.pdf dl {
+  margin:.7em 0 0;
+  page-break-inside:avoid !important;
+  display:block;
+  width:86%;
+  float:left;
+}
+body.pdf dl strong {
+  float:right;
+  margin-top:-2em;
+}
+body.pdf dl em {
+  font-size:130%;
+  font-style:normal;
+}
 
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+.clearfix { zoom:1; }
+.clearfix:after {
+  display:block;
+  visibility:hidden;
+  height:0;
+  clear:both;
+  content:".";
+}
+body {
+  font-family:'Hoefler Text', Times New Roman, Times, serif;
+  color:#444444;
+}
+h1, h2, h3, h4, ul dl dt { font-family:Futura, "Century Gothic", AppleGothic, sans-serif; }
+.container {
+  margin:0 auto;
+  padding:0;
+  background:whiteSmoke;
+  border:solid #666666;
+  border-width:8px 0 2px 0;
+  text-align:left;
+}
+.resume {
+  position:relative;
+  padding:10px 20px;
+}
+.resume > blockquote { text-align:right; }
+.resume > blockquote a[href$='keyedupmedia.com'] { display:block; }
+a { color:#990003; }
+a[href$='.pdf'] {
+  display:inline-block;
+  background:#666666;
+  color:white;
+  padding:6px 12px;
+  margin-bottom:6px;
+  text-decoration:none;
+}
+blockquote {
+  margin:0;
+  padding:0;
+  line-height:1.4em;
+}
+hr {
+  display:block;
+  position:relative;
+  padding:0;
+  margin:18px auto;
+  width:100%;
+  clear:both;
+  border:none;
+  border-top:1px solid #cccccc;
+  font-size:1px;
+  line-height:0;
+  overflow:visible;
+  page-break-after:avoid;
+}
+h1 {
+  margin:0;
+  padding:0;
+  font-size:36px;
+  letter-spacing:-1px;
+  font-weight:normal;
+}
+h2 {
+  margin:0;
+  padding:0;
+  font-size:18px;
+  font-style:italic;
+  letter-spacing:-1px;
+  font-weight:normal;
+}
+h3 {
+  margin:0;
+  padding:0 0 .5em;
+  font-size:150%;
+  font-style:italic;
+  font-weight:normal;
+}
+h3+p {
+  margin:.6em 0 16px;
+  padding:0;
+  display:block;
+  font-size:104%;
+  line-height:24px;
+}
+ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+ul li {
+  margin:0;
+  padding:0;
+}
+ul dl {
+  margin:.3em 0 0;
+  padding:0;
+  width:100%;
+}
+ul dl dt { font-size:100%; }
+ul dl dd {
+  margin:0 0 1em;
+  padding:0 2em 0 0;
+  font-size:.8em;
+  line-height:1.5em;
+}
+ol {
+  margin:0;
+  padding:0 0 .75em;
+  width:84%;
+  display:inline-block;
+}
+ol li {
+  margin:0 0 0 1em;
+  padding:0;
+  border-top:1px solid #cccccc;
+  width:100%;
+  float:left;
+  list-style:none;
+  line-height:24px;
+  font-size:14px;
+}
+ol li:nth-child(1) { border-top:none; }
+dl {
+  display:inline-block;
+  width:75%;
+  margin:0;
+  padding:0;
+}
+dl dt {
+  margin:0;
+  padding:0;
+  font-size:140%;
+}
+dl dd {
+  margin:0 0 1.5em;
+  padding:0;
+  font-size:80%;
+  line-height:1.4em;
+}
+dl strong { display:block; }
+dl em {
+  display:block;
+  font-size:110%;
+  margin:.15em 0 .5em;
+  font-style:bold;
+}
+#footer { display:none; }
+#footer + p {
+  width:100%;
+  font-size:11px;
+  text-align:center;
+}
 
-		<style type="text/css">
-			article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display:block; }
-			audio, canvas, video {
-				display:inline-block;
-				*display:inline;
-				*zoom:1;
-			}
-			audio:not([controls]) { display:none; }
-			[hidden] { display:none; }
-			html {
-				font-size:100%;
-				-webkit-text-size-adjust:100%;
-				-ms-text-size-adjust:100%;
-			}
-			html, button, input, select, textarea { font-family:sans-serif; }
-			body { margin:0; }
-			a:focus { outline:thin dotted; }
-			a:hover, a:active { outline:0; }
-			h1 {
-				font-size:2em;
-				margin:0.67em 0;
-			}
-			h2 {
-				font-size:1.5em;
-				margin:0.83em 0;
-			}
-			h3 {
-				font-size:1.17em;
-				margin:1em 0;
-			}
-			h4 {
-				font-size:1em;
-				margin:1.33em 0;
-			}
-			h5 {
-				font-size:0.83em;
-				margin:1.67em 0;
-			}
-			h6 {
-				font-size:0.75em;
-				margin:2.33em 0;
-			}
-			abbr[title] { border-bottom:1px dotted; }
-			b, strong { font-weight:bold; }
-			blockquote { margin:1em 40px; }
-			dfn { font-style:italic; }
-			mark {
-				background:#ffff00;
-				color:#000000;
-			}
-			p { margin: .5em 0; }
-			pre { margin: 0; }
-			pre, code, kbd, samp {
-				font-family:'consolas', monospace, serif;
-				_font-family:'courier new', monospace;
-				font-size:.93em;
-			}
-			pre {
-				white-space:pre;
-				white-space:pre-wrap;
-				word-wrap:break-word;
-			}
-			q { quotes:none; }
-			q:before, q:after {
-				content:'';
-				content:none;
-			}
-			small { font-size:75%; }
-			sub, sup {
-				font-size:75%;
-				line-height:0;
-				position:relative;
-				vertical-align:baseline;
-			}
-			sup { top:-0.5em; }
-			sub { bottom:-0.25em; }
-			dl, menu, ol, ul { margin:1em 0; }
-			dd { margin:0 0 0 40px; }
-			menu, ol, ul { padding:0 0 0 40px; }
-			nav ul, nav ol {
-				list-style:none;
-				list-style-image:none;
-			}
-			img {
-				border:0;
-				-ms-interpolation-mode:bicubic;
-			}
-			svg:not(:root) { overflow:hidden; }
-			figure { margin:0; }
-			form { margin:0; }
-			fieldset {
-				border:1px solid #c0c0c0;
-				margin:0 2px;
-				padding:0.35em 0.625em 0.75em;
-			}
-			legend {
-				border:0;
-				padding:0;
-				white-space:normal;
-				*margin-left:-7px;
-			}
-			button, input, select, textarea {
-				font-size:100%;
-				margin:0;
-				vertical-align:baseline;
-				*vertical-align:middle;
-			}
-			button, input { line-height:normal; }
-			button, input[type="button"], input[type="reset"], input[type="submit"] {
-				cursor:pointer;
-				-webkit-appearance:button;
-				*overflow:visible;
-			}
-			button[disabled], input[disabled] { cursor:default; }
-			input[type="checkbox"], input[type="radio"] {
-				box-sizing:border-box;
-				padding:0;
-				*height:13px;
-				*width:13px;
-			}
-			input[type="search"] {
-				-webkit-appearance:textfield;
-				-moz-box-sizing:content-box;
-				-webkit-box-sizing:content-box;
-				box-sizing:content-box;
-			}
-			input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance:none; }
-			button::-moz-focus-inner, input::-moz-focus-inner {
-				border:0;
-				padding:0;
-			}
-			textarea {
-				overflow:auto;
-				vertical-align:top;
-			}
-			table {
-				border-collapse:collapse;
-				border-spacing:0;
-			}
+@media screen and (min-width: 15em) {
+}
+@media screen and (min-width: 30em) {
+}
+@media screen and (min-width: 37.5em) {
+  body { padding:2em 0; }
+  blockquote {
+    top:10px;
+    right:50px;
+    position:absolute;
+  }
+  h1 { margin-top:.5em; }
+  ol { margin:0 0 0 1em; }
+  ol li {
+    width:50%;
+    margin:0;
+  }
+  ol li:nth-child(1), ol li:nth-child(2) { border-top:none; }
+}
+@media screen and (min-width: 57em) {
+  .container { width:912px; }
+  .resume {
+    position:relative;
+    padding:40px 50px;
+  }
+  blockquote {
+    top:40px;
+    right:50px;
+    position:absolute;
+  }
+  h1 {
+    margin-top:0;
+    font-size:48px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:normal;
+  }
+  h2 {
+    text-transform:uppercase;
+    font-style:italic;
+    letter-spacing:2px;
+    font-weight:normal;
+  }
+  h3 {
+    float:left;
+    width:16%;
+  }
+  h3+p {
+    float:left;
+    width:84%;
+  }
+  ul li {
+    width:28%;
+    float:left;
+  }
+  ul dl dt {
+    font-size:122%;
+    font-weight:normal;
+    margin-bottom:.75em;
+  }
+  ul dl dd { padding:0 4em 0 0; }
+  ol {
+    float:left;
+    width:84%;
+    margin:.6em 0 0;
+  }
+  ol li {
+    width:33%;
+    margin:0;
+  }
+  ol li:nth-child(3n) { width:34%; }
+  ol li:nth-child(1), ol li:nth-child(2), ol li:nth-child(3) { border-top:none; }
+  dl { margin:.5em 0 0; }
+  dl strong {
+    float:right;
+    margin-top:-2em;
+  }
+  dl em {
+    font-size:130%;
+    font-style:normal;
+  }
+  dl ul {
+    list-style-type:disc;
+    margin-left:5px;
+    margin-right:0px;
+    padding-left:10px;
+    padding-right:0px;
+  }
+  dl ul li {
+    width:auto;
+    float:none;
+  }
+}
+@media screen and (min-width: 118em) {
+}
 
-			body.pdf { color:black; }
-			body.pdf a {
-				text-decoration:none;
-				color:black;
-			}
-			body.pdf .container {
-				width:1000px;
-				margin:0 auto;
-				padding:0;
-				background:none;
-				border:none;
-				border-width:8px 0 2px 0;
-				text-align:left;
-			}
-			body.pdf .resume {
-				position:relative;
-				padding:0px 20px 0px 20px;
-			}
-			body.pdf a[href$='.pdf'] { display:none; }
-			body.pdf h1 {
-				letter-spacing:0;
-				margin-top:0;
-				font-size:40px;
-				text-transform:uppercase;
-				font-weight:normal;
-			}
-			body.pdf h2 {
-				letter-spacing:0;
-				text-transform:uppercase;
-				font-style:italic;
-				font-weight:normal;
-				font-family: 'Open Sans Condensed', sans-serif;
-			}
-			body.pdf h3 {
-				float:left;
-				width:14%;
-				font-style:normal;
-			}
-			body.pdf h3+p {
-				float:left;
-				width:84%;
-			}
-			body.pdf blockquote {
-				top:40px;
-				right:20px;
-				position:absolute;
-			}
-			body.pdf ul li {
-				width:28%;
-				float:left;
-			}
-			body.pdf ul dl {
-				margin:0;
-				padding:0.3em 0 0;
-			}
-			body.pdf ul dl dt {
-				font-size:122%;
-				font-weight:normal;
-				margin:0 0 .75em;
-			}
-			body.pdf ul dl dd { padding:0 4em 0 0; }
-			body.pdf ol {
-				float:left;
-				width:84%;
-				margin:.7em 0 0;
-			}
-			body.pdf ol li {
-				width:33%;
-				margin:0;
-			}
-			body.pdf ol li:nth-child(3n) { width:34%; }
-			body.pdf ol li:nth-child(1), body.pdf ol li:nth-child(2), body.pdf ol li:nth-child(3) { border-top:none; }
-			body.pdf dl {
-				margin:.7em 0 0;
-				page-break-inside:avoid !important;
-				display:block;
-				width:86%;
-				float:left;
-			}
-			body.pdf dl strong {
-				float:right;
-				margin-top:-2em;
-			}
-			body.pdf dl em {
-				font-size:130%;
-				font-style:normal;
-			}
+</style>
+</head>
 
-			.clearfix { zoom:1; }
-			.clearfix:after {
-				display:block;
-				visibility:hidden;
-				height:0;
-				clear:both;
-				content:".";
-			}
-			body {
-				font-family: 'Open Sans Condensed', sans-serif;
-				color:#444444;
-			}
-			h1, h2, h3, h4, ul dl dt {
-				font-family: 'Roboto Slab', serif;
-			}
-			.container {
-				margin:0 auto;
-				padding:0;
-				background:whiteSmoke;
-				border:solid #666666;
-				border-width:8px 0 2px 0;
-				text-align:left;
-			}
-			.resume {
-				position:relative;
-				padding:0 20px 10px 20px;
-			}
-			.resume > blockquote { text-align:right; }
-			.resume > blockquote a[href$='arrl.net'] {
-				display:block;
-				margin-top: -10px;
-			}
-			a { color:#990003; }
-			a[href$='.pdf'] {
-				display:inline-block;
-				background:#666666;
-				color:white;
-				padding:6px 12px;
-				margin-bottom:6px;
-				text-decoration:none;
-			}
-			blockquote {
-				margin:0;
-				padding:0;
-				line-height:1.4em;
-			}
-			hr {
-				display:block;
-				position:relative;
-				padding:0;
-				margin:10px auto;
-				width:100%;
-				clear:both;
-				border:none;
-				border-top:1px solid #cccccc;
-				font-size:1px;
-				line-height:0;
-				overflow:visible;
-				page-break-after:avoid;
-			}
-			h1 {
-				margin:0;
-				padding:0;
-				font-size:36px;
-				letter-spacing:-1px;
-				font-weight:normal;
-			}
-			h2 {
-				margin:0;
-				padding:0;
-				font-size:18px;
-				font-style:italic;
-				letter-spacing:-1px;
-				font-weight:normal;
-			}
-			h3 {
-				margin:0;
-				padding:5px 0 .5em;
-				font-size:140%;
-				font-style:italic;
-				font-weight:normal;
-			}
-			h3+p {
-				margin:.6em 0 16px;
-				padding:0;
-				display:block;
-			}
-			ul {
-				margin:0;
-				padding:0;
-				list-style:none;
-			}
-			ul li {
-				margin:0;
-				padding:0;
-			}
-			ul dl {
-				margin:.3em 0 0;
-				padding:0;
-				width:100%;
-			}
-			ul dl dt { font-size:100%; }
-			ul dl dd {
-				margin:0 0 1em;
-				padding:0 2em 0 0;
-				font-size:.8em;
-				line-height:1.5em;
-			}
-			ol {
-				margin:0;
-				padding:0 0 .75em;
-				width:84%;
-				display:inline-block;
-			}
-			ol li {
-				margin:0 0 0 1em;
-				padding:0;
-				border-top:1px solid #cccccc;
-				width:100%;
-				float:left;
-				list-style:none;
-				line-height:24px;
-				font-size:14px;
-			}
-			ol li:nth-child(1) { border-top:none; }
-			dl {
-				display:inline-block;
-				width:75%;
-				margin:0;
-				padding:0;
-			}
-			dl dt {
-				margin:0;
-				padding:0;
-				font-size:140%;
-			}
-			dl dd {
-				margin:0 0 1.5em;
-				padding:0;
-				font-size:80%;
-				line-height:1.4em;
-			}
-			dl strong { display:block; }
-			dl em {
-				display:block;
-				font-size:110%;
-				margin:.15em 0 .5em;
-				font-style:bold;
-			}
-			#footer { display:none; }
-			#footer + p {
-				width:100%;
-				font-size:11px;
-				text-align:center;
-			}
+<body class="pdf">
 
-			@media screen and (min-width: 15em) {
-			}
-			@media screen and (min-width: 30em) {
-			}
-			@media screen and (min-width: 37.5em) {
-				body { padding:2em 0; }
-				blockquote {
-					top:10px;
-					right:50px;
-					position:absolute;
-				}
-				h1 { margin-top:.5em; }
-				ol { margin:0 0 0 1em; }
-				ol li {
-					width:50%;
-					margin:0;
-				}
-				ol li:nth-child(1), ol li:nth-child(2) { border-top:none; }
-			}
-			@media screen and (min-width: 57em) {
-				.container { width:912px; }
-				.resume {
-					position:relative;
-					padding:40px 50px;
-				}
-				blockquote {
-					top:40px;
-					right:50px;
-					position:absolute;
-				}
-				h1 {
-					margin-top:0;
-					font-size:48px;
-					text-transform:uppercase;
-					letter-spacing:3px;
-					font-weight:normal;
-				}
-				h2 {
-					text-transform:uppercase;
-					font-style:italic;
-					letter-spacing:2px;
-					font-weight:normal;
-				}
-				h3 {
-					float:left;
-					width:16%;
-				}
-				h3+p {
-					float:left;
-					width:84%;
-				}
-				ul li {
-					width:28%;
-					float:left;
-				}
-				ul dl dt {
-					font-size:122%;
-					font-weight:normal;
-					margin-bottom:.75em;
-				}
-				ul dl dd { padding:0 4em 0 0; }
-				ol {
-					float:left;
-					width:84%;
-					margin:.6em 0 0;
-				}
-				ol li {
-					width:33%;
-					margin:0;
-				}
-				ol li:nth-child(3n) { width:34%; }
-				ol li:nth-child(1), ol li:nth-child(2), ol li:nth-child(3) { border-top:none; }
-				dl { margin:.5em 0 0; }
-				dl strong {
-					float:right;
-					margin-top:-2em;
-				}
-				dl em {
-					font-size:130%;
-					font-style:normal;
-				}
-				dl ul {
-					list-style-type:disc;
-					margin-left:5px;
-					margin-right:0px;
-					padding-left:10px;
-					padding-right:0px;
-				}
-				dl ul li {
-					width:auto;
-					float:none;
-				}
-			}
-			@media screen and (min-width: 118em) {
-			}
-		</style>
+<div class="container">
+    <div class="resume">
+        <h1>Christopher Snyder</h1>
 
-	</head>
+<h2>Full-Stack Web Developer</h2>
 
-	<body class="pdf">
+<blockquote>
+  <p><a href="resume.pdf">Download PDF</a>
+  <a href="KB1RMA@arrl.net">KB1RMA@arrl.net</a>
+  (603) 770-6389</p>
+</blockquote>
 
-		<div class="container">
-			<div class="resume">
-				<h1>Christopher Snyder</h1>
+<hr />
 
-				<h2>Full-Stack Web Developer</h2>
+<h3 id="profile">Profile</h3>
 
-				<blockquote>
-					<p><a href="resume.pdf">Download PDF</a>
-					<a href="mailto:kb1rma@arrl.net">KB1RMA@arrl.net</a>
-					(603) 770-6389</p>
-				</blockquote>
+<p>Enjoys the ever-evolving landscape of the modern world wide web. Discovering exciting and effective ways of leveraging new technologies and techniques to create effective user experience while alleviating design constraint.</p>
 
-				<hr />
+<hr />
 
-				<h3 id="profile">Profile</h3>
+<h3 id="skills">Skills</h3>
 
-				<p>Enjoys the ever-evolving landscape of the modern world wide web. Discovering exciting and effective ways of leveraging new technologies and techniques to create effective user experience and alleviate design constraints.</p>
+<dl>
+<dt>Front-End Development</dt>
+<dd>
+<p>Translating mock-ups to tested, accessible and semantic markup and styling.</p>
 
-				<hr />
-
-				<h3 id="skills">Skills</h3>
-
-				<dl>
-					<dt>Front-End Development</dt>
-					<dd>
-						<p>Translating mock-ups to functional and semantic HTML and CSS.
-								Leveraging the increased productivity provided by front-end frameworks including Zurb&#8217;s Foundation and Twitter&#8217;s Bootstrap as well as CSS pre-processors for code maintainability.
-								Theme development for the Wordpress CMS and PHP frameworks in both Blade and Twig template languages.
-								Improving Wordpress page response times with effective caching.</p>
-
-						<pre><code>
-  <span style='color:#696969; '>// Front-End Resources</span>
-  <span style='color:#800000; font-weight:bold; '>var</span> resources <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#800000; '>'</span><span style='color:#0000e6; '>Javascript</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>HTML</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>CSS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>SCSS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>LESS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>jQuery</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>PHP</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Twig</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Blade</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Git</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Grunt.JS</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Yeoman</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span>
-                   <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Sketch</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Photoshop</span><span style='color:#800000; '>'</span><span style='color:#808030; '>,</span> <span style='color:#800000; '>'</span><span style='color:#0000e6; '>Illustrator</span><span style='color:#800000; '>'</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<pre><code>    // Front-End Resources
+    const resources = ['Javascript', 'React', 'Webpack', 'Babel', 'Redux', 'NextJS', 'Gatsby', 'React Testing Library', 
+                       'Jest', 'Mocha', 'Chai', 'Git', 'VSCode', 'Cypress', 'Selenium'];
 </code></pre>
-					</dd>
+</dd>
 
-					<dt>Back-End Development / System Administration</dt>
-					<dd>
-						<p>Comfortable with modern PHP Model-View-Controller (MVC) frameworks and their leverage of modular design and Don&#8217;t Repeat Yourself (DRY) practices. Configuration of software stacks of varying complexity. From simple LAMP stacks with Plesk/cPanel to multiple load balanced application servers behind Nginx and Varnish instances.
-								Multi node management via Puppet.</p>
+<dt>Back-End Development</dt>
+<dd>
+<p>Building REST/GraphQL services to drive and populate rich frontend applications.</p>
 
-						<pre><code>
-  <span style='color:#696969;'>// Back-End Resources</span><span style='color:#000000;  '></span>
-  <span style='color:#797997;  '>$resources</span><span style='color:#000000;  '> </span><span style='color:#808030;  '>=</span><span style='color:#000000;  '> </span><span style='color:#808030;  '>[</span><span style='color:#0000e6;  '>'PHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Ruby'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Composer'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Wordpress'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'OctoberCMS'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Laravel'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'CakePHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'LithiumPHP'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Rails'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'MySQL'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '></span>
-                <span style='color:#0000e6;  '>'PostgreSQL'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'MongoDB'</span><span style='color:#808030;  '>,</span><span style='color:#000000;  '> </span><span style='color:#0000e6;  '>'Git'</span><span style='color:#808030;  '>]</span><span style='color:#800080;  '>;</span><span style='color:#000000;  '></span>
-						</code></pre>
-
-						<pre><code>  <span style='color:#696969; '># Administration Tools &amp; Software</span>
-  tools <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#0000e6; '>'Bash'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Ruby'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Puppet'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Debian'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Apache'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Nginx'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'Varnish'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'MySQL'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'PostgreSQL'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'MongoDB'</span><span style='color:#808030; '>,</span> <span style='color:#0000e6; '>'AWS'</span><span style='color:#808030; '>]</span>
+<pre><code>    // Back-End Resources
+    $resources = ['NodeJS', 'NPM/Yarn', 'MySQL', 'AWS', 'Azure', 'PostgreSQL', 'Git'];
 </code></pre>
-					</dd>
+</dd>
 
-				</dl>
+<dt>System Administration/DevOps</dt>
+<dd>
+<p>Configuration and deployment of software stacks and containerization of services.</p>
 
-				<hr />
+<pre><code>    # Administration Tools &amp; Software
+    tools = ['Bash', 'Docker', 'Kubernetes', 'Pivotal Cloud Foundry', 'Alpine', 'Debian', 'Nginx', 'Varnish', 
+             'PostgreSQL', 'MongoDB', 'AWS', 'Azure']
+</code></pre>
+</dd>
+</dl>
 
-				<h3 id="experience">Experience</h3>
+<hr />
 
-				<dl>
+<h3 id="experience">Experience</h3>
 
-					<dt>Matter Communications</dt>
-					<dd>
-						<p><em>Web Developer</em>
-						<strong>January 2014 - December 2015</strong></p>
+<dl>
+<dt>Liberty Mutual</dt>
+<dd>
+<p><em>Senior Software Developer</em>
+<strong>Mar 2017 - Present</strong></p>
 
-						<p>
-							Develop site designs based on mock-ups provided as Photoshop, Illustrator and Sketch files with involvement from initial brainstorm to final site launch.
-							Sites varying in complexity from static single page parallax microsites to fully featured custom Wordpress themes.
-							Provide one-on-one Wordpress CMS training post launch to clients.
-							Contribute to proposals and RFP responses and accompany account teams to new business pitches.
-						</p>
+<p>Designed and built fully automated end-to-end testing suite leveraging continuous integration pipelines to ensure business rules are adhered to across browser vendors.
+Rearchitected a portion of libertymutual.com to utilize server rendered React via NextJS while maintaining the speed of a single-page app with fast and efficient client-side routing.</p>
+</dd>
 
-					</dd>
+<dt>Liberty Mutual</dt>
+<dd>
+<p><em>Software Developer</em>
+<strong>June 2016 - Mar 2017</strong></p>
 
-					<dt>Keyed-Up Media</dt>
-					<dd>
-						<p><em>Lead Developer/Managing Director</em>
-						<strong>August 2011 - January 2014</strong></p>
+<p>Maintained and developed new pages and features for libertymutual.com. Designed and implemented HTTP caching strategy for improved page load performance for an improved user experience and decreased origin server load.
+Bridged vendor gaps to design and implement a continuous integration and deployment pipeline for automated and auditable code deployments to a vendor hosted cloud environment.</p>
+</dd>
 
-						<p>Building custom designed online experiences expressing small business&#8217; presences on the web. Sites requiring a CMS are built on Wordpress with themes adhering to the latest Wordpress best practices.
-						E-commerce solutions built on the Lemonstand platform allowing for rapid development and vast flexibility for customization.
-						Provided and developed hosting solutions with globally distributed caching nodes for increased reliability, low response time and high traffic handling.</p>
-					</dd>
+<dt>Matter Communications</dt>
+<dd>
+<p><em>Web Developer</em>
+<strong>January 2014 - 2016</strong></p>
 
-					<dt>Florentine Films</dt>
-					<dd>
-						<p><em>Intern for Ken Burn&#8217;s film &#8220;Dust Bowl&#8221;</em>
-						<strong>January 2011 - May 2011</strong></p>
+<p>Develop site designs based on mock-ups provided as Photoshop, Illustrator and Sketch files with involvement from initial brainstorm to final site launch. Sites varying in complexity from static single page parallax microsites to fully featured custom Wordpress themes. Provide one-on-one Wordpress CMS training post launch to clients. Contribute to proposals and RFP responses and accompany account teams to new business pitches.</p>
+</dd>
+</dl>
 
-						<p>Filtered, optimized, and compressed digital deliverables for the web.
-						Created Microsoft Excel macros for timecode calculation from EDL&#8217;s.
-						Scripted various organizational metadata tasks using free tools including ExifTool.</p>
-					</dd>
+<hr />
 
-					<dt>New Hampshire Public Television (NHPTV)</dt>
-					<dd>
-						<p><em>Intern</em>
-						<strong>August 2010 - December 2010</strong></p>
+<h3 id="education">Education</h3>
 
-						<p>Creation of digital deliverables for PBS&#8217;s online video manager.
-						Development of HTTP Live Streaming for mobile streaming of live material.
-						Text file parsing to automate database importation.
-						Offline Editing NH Outlook program on Avid Media Composer workstations.
-						Continuing to provide support as called upon.</p>
-					</dd>
+<dl>
+<dt>Fitchburg State University</dt>
+<dd><em>B.S. Communications Media/Film Production</em>
+<strong>2006-2010</strong></dd>
+</dl>
 
-				</dl>
+<hr />
 
-				<hr />
+<h3 id="footer">Footer</h3>
 
-				<h3 id="education">Education</h3>
+<p>Christopher Snyder &#8212; <a href="chris@keyedupmedia.com">chris@keyedupmedia.com</a> &#8212; (603) 770-6389</p>
 
-				<dl>
-					<dt>Fitchburg State University</dt>
-					<dd>
-						<em>B.S. Communications Media/Film Production</em>
-						<strong>2006-2010</strong>
-					</dd>
-				</dl>
+<hr />
 
-				<hr />
+    </div>
+</div>
 
-				<h3 id="footer">Footer</h3>
-
-				<p>Christopher Snyder &#8212; <a href="mailto:kb1rma@arrl.net">KB1RMA@arrl.net</a> &#8212; (603) 770-6389 &#8212; Newburyport, MA &#8212; References available upon request</p>
-
-				<hr />
-
-			</div> <!-- /.resume -->
-
-		</div> <!-- /.container -->
-
-	</body>
+</body>
 </html>
